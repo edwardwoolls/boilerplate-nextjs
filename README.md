@@ -1,50 +1,81 @@
-# Next.js Project Structure
+# Next.js Project Boilerplate
 
-A modern Next.js application with built-in theme support and reusable UI components.
+A modern, well-structured Next.js boilerplate with built-in theme support, TypeScript, ESLint, Prettier, and Husky setup.
 
-## 🚀 Tech Stack
+## 🚀 Features
 
-- **Framework:** Next.js 15.0.3
-- **Styling:** Tailwind CSS
-- **Theme Management:** next-themes
-- **UI Components:** Radix UI
-- **Icons:** Lucide React
-- **Utilities:**
-  - class-variance-authority (for component variants)
-  - clsx & tailwind-merge (for className merging)
-  - tailwindcss-animate (for animations)
+- ⚡️ Next.js 15 with App Router
+- 🎨 Tailwind CSS for styling
+- 🌙 Dark/Light mode with next-themes
+- 📏 ESLint & Prettier for code linting and formatting
+- 🐶 Husky for Git hooks
+- 📝 Lint staged for running checks on staged files
+- 🔍 TypeScript for type checking
+- 📦 Radix UI for accessible components
+- 🎯 Absolute imports and path aliases
 
-## 🛠️ Key Dependencies
+## 📦 Getting Started
 
-### Production Dependencies
+1. Clone the repository:
 
-- `next`: ^15.0.3
-- `react` & `react-dom`: 19.0.0-rc
-- `@radix-ui/react-dropdown-menu`: ^2.1.2
-- `@radix-ui/react-slot`: ^1.1.0
-- `next-themes`: ^0.4.3
-- `lucide-react`: ^0.462.0
-- `class-variance-authority`: ^0.7.1
-- `tailwind-merge`: ^2.5.5
-- `tailwindcss-animate`: ^1.0.7
+   ```bash
+   git clone [your-repo-url]
+   ```
 
-### Development Dependencies
+2. Install dependencies:
 
-- `typescript`: ^5
-- `tailwindcss`: ^3.4.1
-- `eslint` & related plugins
-- `prettier` & related plugins
-- `@typescript-eslint/parser`: ^8.16.0
+   ```bash
+   yarn install
+   ```
 
-## 🎨 Theme System
+3. Run the development server:
+   ```bash
+   yarn dev
+   ```
 
-The project includes a robust theming system with:
+## 🛠️ Development
 
-- Light/Dark mode support
-- System theme detection
-- CSS variables for consistent styling
-- Smooth theme transitions
+### Commands
 
-### Theme Toggle Component
+- `yarn dev` - Start development server
+- `yarn build` - Create production build
+- `yarn start` - Start production server
+- `yarn lint` - Run ESLint
+- `yarn format` - Run Prettier
+- `yarn check-types` - Run TypeScript compiler check
+- `yarn test` - Run all checks (lint, types)
 
-The theme toggle allows users to switch between light, dark, and system themes using a dropdown menu. Reference implementation:
+### Git Hooks
+
+- Pre-commit: Runs lint-staged, which:
+  - Lints and formats staged files
+  - Runs type checking
+  - Ensures code quality before commits
+
+## 🏗️ Project Structure
+
+```
+├── app
+├── app/ # App router pages
+├── components/ # React components
+│ ├── ui/ # Reusable UI components
+│ └── ... # Feature-specific components
+├── lib/ # Library code
+├── styles/ # Global styles
+├── types/ # TypeScript type definitions
+└── utils/ # Utility functions
+
+
+## 🔧 Configuration Files
+
+- `.eslintrc.json` - ESLint configuration
+- `.prettierrc.js` - Prettier configuration
+- `tailwind.config.js` - Tailwind CSS configuration
+- `tsconfig.json` - TypeScript configuration
+- `.husky/` - Git hooks
+- `.lintstagedrc.js` - Lint-staged configuration
+
+## 📝 License
+
+MIT
+```
