@@ -1,0 +1,10 @@
+/node_modules
+
+# next.js
+/.next/
+
+# vercel
+.vercel
+
+# typescript
+next-env.d.ts
